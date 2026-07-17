@@ -3,150 +3,164 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cotización Paquete Ecuestre | Salón Los Caballos · Primavera Events Group</title>
-    <meta name="description" content="Cotización del Paquete Ecuestre adaptado para Salón Jardín Los Caballos, Cuernavaca Morelos. Carnitas, DJ, audio, pista, iluminación, meseros y más. $399 MXN por persona.">
-    <meta property="og:title" content="Cotización Paquete Ecuestre — Salón Los Caballos">
-    <meta property="og:description" content="Propuesta integral con carnitas, DJ, audio, pista 5×5, letras iluminadas y coordinación. $399 MXN por persona.">
+    <title>Cotización Paquete Todo Incluido | Salón Los Caballos · Primavera Events Group</title>
+    <meta name="description" content="Cotización del Paquete Todo Incluido en Salón Jardín Los Caballos, Cuernavaca Morelos. Carnitas, DJ, audio, pista, iluminación, meseros y más. $399 MXN por persona.">
+    <meta property="og:title" content="Cotización Paquete Los Caballos — Primavera Events Group">
+    <meta property="og:description" content="Carnitas, DJ, audio, pista 5×5, letras iluminadas y coordinación. $399 MXN por persona.">
     <meta property="og:image" content="caballos_hero1.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <style>
+/* ══ BRAND TOKENS ══════════════════════════════════════════ */
 :root{
-    --primary:#5a3e2b;
-    --primary-light:#8a6244;
-    --primary-dark:#1a1008;
-    --accent:#c9a96e;
-    --accent-light:#e8d5b0;
-    --background:#faf8f5;
-    --white:#ffffff;
-    --beige:#ede8e0;
-    --soft-gold:#f5edd9;
-    --gray-text:#6d6560;
-    --pink:#F65C7A;
+    --primary-pink:#F65C7A;
+    --primary-light:#FF8FA3;
+    --primary-dark:#1F1F1F;
+    --background-light:#F8F6F4;
+    --white:#FFFFFF;
+    --soft-pink:#FADADD;
+    --beige:#EFE7E1;
+    --gold-accent:#C9A96E;
+    --gray-text:#6D6D6D;
 }
 *{margin:0;padding:0;box-sizing:border-box;}
 
 /* ══ PRELOADER ══ */
 #preloader{position:fixed;top:0;left:0;width:100%;height:100%;background:var(--white);z-index:9999;display:flex;align-items:center;justify-content:center;transition:opacity 0.8s ease,visibility 0.8s ease;}
 #preloader.fade-out{opacity:0;visibility:hidden;}
-#preloader video{max-width:100%;max-height:100%;width:auto;height:auto;object-fit:contain;}
+#preloader video{max-width:100%;max-height:100%;object-fit:contain;}
 .preloader-overlay{position:absolute;bottom:10%;left:50%;transform:translateX(-50%);text-align:center;z-index:10;width:90%;max-width:420px;}
 .preloader-text{color:var(--primary-dark);font-size:1rem;margin-bottom:20px;font-weight:500;font-family:'Poppins',sans-serif;}
-.btn-enter{background:var(--primary);color:var(--white);border:none;padding:13px 36px;border-radius:30px;font-size:1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 18px rgba(90,62,43,0.4);transition:all 0.3s ease;font-family:'Poppins',sans-serif;}
-.btn-enter:hover{transform:scale(1.05);background:var(--primary-light);}
+.btn-enter{background:var(--primary-pink);color:var(--white);border:none;padding:13px 36px;border-radius:30px;font-size:1rem;font-weight:600;cursor:pointer;box-shadow:0 4px 18px rgba(246,92,122,0.4);transition:all 0.3s ease;font-family:'Poppins',sans-serif;}
+.btn-enter:hover{transform:scale(1.05);background:#e04b69;}
 
 /* ══ BASE ══ */
-body{font-family:'Poppins',sans-serif;background:var(--background);color:var(--primary-dark);line-height:1.6;-webkit-font-smoothing:antialiased;}
+body{font-family:'Poppins',sans-serif;background:var(--background-light);color:var(--primary-dark);line-height:1.6;-webkit-font-smoothing:antialiased;}
 h1,h2,h3,h4{font-family:'Playfair Display',serif;}
 
 /* ══ HERO SLIDESHOW ══ */
 .hero{position:relative;height:70vh;min-height:460px;overflow:hidden;display:flex;align-items:flex-end;justify-content:center;}
 .hero-slides{position:absolute;inset:0;}
-.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s ease;will-change:opacity;}
+.hero-slide{position:absolute;inset:0;background-size:cover;background-position:center;opacity:0;transition:opacity 1.2s ease;}
 .hero-slide.active{opacity:1;}
 .hero-slide:nth-child(1){background-image:url('caballos_hero1.jpg');}
 .hero-slide:nth-child(2){background-image:url('caballos_hero2.jpg');}
 .hero-slide:nth-child(3){background-image:url('caballos_hero3.jpg');}
 .hero-slide:nth-child(4){background-image:url('caballos_hero4.jpg');}
-.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(26,16,8,0.1),rgba(26,16,8,0.65));z-index:1;}
+.hero::before{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(31,31,31,0.15),rgba(31,31,31,0.65));z-index:1;}
 .hero-content{position:relative;z-index:2;text-align:center;padding:0 20px 70px;color:var(--white);animation:fadeInDown 1s ease;}
-.hero-eyebrow{font-family:'Poppins',sans-serif;font-size:0.78rem;letter-spacing:5px;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:12px;}
+.hero-eyebrow{font-family:'Poppins',sans-serif;font-size:0.78rem;letter-spacing:5px;text-transform:uppercase;color:var(--gold-accent);font-weight:600;margin-bottom:12px;}
 .hero h1{font-size:3.8rem;font-weight:700;line-height:1.05;text-shadow:0 3px 24px rgba(0,0,0,0.5);margin-bottom:8px;}
 .hero-sub{font-size:1rem;letter-spacing:5px;text-transform:uppercase;font-weight:300;color:rgba(255,255,255,0.8);}
 .hero-badges{display:flex;justify-content:center;gap:14px;margin-top:20px;flex-wrap:wrap;}
-.hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(201,169,110,0.2);border:1px solid var(--accent);backdrop-filter:blur(4px);padding:7px 18px;border-radius:50px;font-size:0.8rem;color:var(--accent);font-weight:600;}
-/* Hero dots */
+.hero-badge{display:inline-flex;align-items:center;gap:7px;background:rgba(201,169,110,0.2);border:1px solid var(--gold-accent);backdrop-filter:blur(4px);padding:7px 18px;border-radius:50px;font-size:0.8rem;color:var(--gold-accent);font-weight:600;}
 .hero-dots{position:absolute;bottom:20px;left:50%;transform:translateX(-50%);z-index:3;display:flex;gap:8px;}
 .hero-dot{width:8px;height:8px;border-radius:50%;background:rgba(255,255,255,0.4);cursor:pointer;transition:all 0.3s ease;}
-.hero-dot.active{background:var(--accent);transform:scale(1.3);}
+.hero-dot.active{background:var(--gold-accent);transform:scale(1.3);}
 
 /* ══ CONTAINER ══ */
 .container{max-width:1100px;margin:-110px auto 60px;position:relative;z-index:2;padding:0 20px;}
-.quote-card{background:var(--white);border-radius:32px;box-shadow:0 30px 70px rgba(26,16,8,0.12);padding:65px 60px;animation:fadeInUp 1s ease 0.2s both;}
+.quote-card{background:var(--white);border-radius:30px;box-shadow:0 30px 60px rgba(31,31,31,0.12);padding:65px 60px;animation:fadeInUp 1s ease 0.2s both;}
 
 /* ══ HEADER INFO ══ */
-.header-info{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--beige);padding-bottom:45px;margin-bottom:50px;flex-wrap:wrap;gap:25px;}
+.header-info{display:flex;justify-content:space-between;align-items:flex-start;border-bottom:1px solid var(--beige);padding-bottom:40px;margin-bottom:50px;flex-wrap:wrap;gap:22px;}
 .header-main h2{font-size:3rem;color:var(--primary-dark);line-height:1.1;margin-bottom:14px;}
-.header-main p{font-size:1.1rem;color:var(--gray-text);max-width:620px;line-height:1.7;}
-.badge-event{display:inline-flex;align-items:center;gap:8px;background:var(--soft-gold);color:var(--primary);padding:8px 22px;border-radius:40px;font-size:0.88rem;font-weight:600;margin-top:18px;text-transform:uppercase;letter-spacing:1.5px;}
+.header-main p{font-size:1.05rem;color:var(--gray-text);max-width:620px;line-height:1.7;}
+.badge-event{display:inline-flex;align-items:center;gap:8px;background:var(--soft-pink);color:var(--primary-pink);padding:8px 22px;border-radius:40px;font-size:0.88rem;font-weight:600;margin-top:18px;text-transform:uppercase;letter-spacing:1.5px;}
 .summary-boxes{display:flex;gap:14px;flex-wrap:wrap;}
-.info-box{text-align:center;background:var(--background);padding:20px 24px;border-radius:18px;border:1px solid var(--beige);min-width:110px;}
+.info-box{text-align:center;background:var(--background-light);padding:20px 24px;border-radius:18px;border:1px solid var(--beige);min-width:110px;}
 .info-box span{display:block;font-size:0.72rem;color:var(--gray-text);text-transform:uppercase;letter-spacing:1.5px;font-weight:700;margin-bottom:8px;}
 .info-box strong{display:block;font-size:1.4rem;color:var(--primary-dark);font-family:'Playfair Display',serif;}
 
-/* ══ VENUE SHOWCASE ══ */
-.venue-showcase{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin:40px 0;border-radius:24px;overflow:hidden;}
-.venue-showcase img{width:100%;height:220px;object-fit:cover;transition:transform 0.6s ease;cursor:pointer;}
-.venue-showcase img:hover{transform:scale(1.04);}
-.venue-showcase .main-img{grid-column:1/3;}
-.venue-showcase .main-img img{height:320px;}
+/* ══ VENUE LOGO BUTTON ══ */
+.venue-logo-btn{display:block;margin:0 0 40px;text-align:center;}
+.venue-logo-btn img{width:160px;height:auto;object-fit:contain;border:2px solid var(--beige);border-radius:16px;padding:14px 20px;background:var(--white);transition:all 0.3s ease;box-shadow:0 4px 16px rgba(0,0,0,0.06);}
+.venue-logo-btn img:hover{border-color:var(--primary-pink);box-shadow:0 8px 28px rgba(246,92,122,0.18);transform:translateY(-3px);}
+.venue-logo-caption{display:block;font-size:0.78rem;color:var(--gray-text);margin-top:8px;text-transform:uppercase;letter-spacing:1.5px;font-weight:600;}
+
+/* ══ VENUE GALLERY ══ */
+.venue-gallery{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:30px 0 40px;border-radius:22px;overflow:hidden;}
+.venue-gallery img{width:100%;height:200px;object-fit:cover;transition:transform 0.6s ease;cursor:pointer;display:block;}
+.venue-gallery img:hover{transform:scale(1.04);}
+.venue-gallery .span2{grid-column:1/3;height:280px;}
+
+/* ══ VENUE DATA GRID ══ */
+.venue-info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:14px;margin-bottom:50px;}
+.venue-info-card{background:var(--background-light);border:1px solid var(--beige);border-radius:16px;padding:20px;text-align:center;}
+.venue-info-card i{color:var(--primary-pink);font-size:1.4rem;margin-bottom:8px;display:block;}
+.venue-info-card h5{font-size:0.75rem;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;color:var(--gray-text);margin-bottom:5px;}
+.venue-info-card p{font-size:0.95rem;font-weight:600;color:var(--primary-dark);}
 
 /* ══ SECTION TITLE ══ */
 .section-title{color:var(--primary-dark);font-size:1.9rem;margin:55px 0 36px;display:flex;align-items:center;gap:18px;}
-.section-title i{color:var(--primary);}
+.section-title i{color:var(--primary-pink);}
 
-/* ══ DESGLOSE INCLUDES ══ */
+/* ══ INCLUDES GRID ══ */
 .includes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px;margin-bottom:55px;}
 .include-item{background:var(--white);border:1px solid var(--beige);border-radius:22px;overflow:hidden;transition:all 0.5s cubic-bezier(0.165,0.84,0.44,1);display:flex;flex-direction:column;}
-.include-item:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(26,16,8,0.09);border-color:var(--accent);}
+.include-item:hover{transform:translateY(-8px);box-shadow:0 20px 40px rgba(31,31,31,0.08);border-color:var(--primary-pink);}
 .include-img-container{width:100%;height:210px;overflow:hidden;position:relative;}
 .include-img{width:100%;height:100%;object-fit:cover;transition:transform 0.8s ease;}
 .include-item:hover .include-img{transform:scale(1.1);}
-.include-tag{position:absolute;top:14px;left:14px;background:var(--primary);color:var(--white);padding:4px 12px;border-radius:20px;font-size:0.72rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;}
 .include-content{padding:24px;flex-grow:1;display:flex;flex-direction:column;}
 .include-content h4{font-weight:600;font-size:1.12rem;margin-bottom:10px;color:var(--primary-dark);display:flex;align-items:center;gap:10px;}
-.include-content h4 i{color:var(--primary);}
+.include-content h4 i{color:var(--primary-pink);}
 .include-content p{font-size:0.92rem;color:var(--gray-text);line-height:1.65;}
 .include-list{margin-top:10px;list-style:none;padding:0;}
 .include-list li{display:flex;align-items:flex-start;gap:8px;font-size:0.9rem;color:var(--gray-text);margin-bottom:6px;}
-.include-list li i{color:var(--accent);font-size:0.8rem;margin-top:3px;flex-shrink:0;}
+.include-list li i{color:var(--gold-accent);font-size:0.8rem;margin-top:3px;flex-shrink:0;}
 
-/* ══ PRICING (precio único) ══ */
-.pricing-section{background:linear-gradient(135deg,var(--primary-dark) 0%,#3a2515 100%);border-radius:28px;padding:55px;margin-top:60px;color:var(--white);text-align:center;}
-.pricing-section h3{font-family:'Playfair Display',serif;font-size:1.5rem;margin-bottom:8px;color:var(--accent);}
+/* ══ PRICING ══ */
+.pricing-section{background:linear-gradient(135deg,var(--primary-dark) 0%,#2d1422 100%);border-radius:28px;padding:55px;margin-top:60px;color:var(--white);text-align:center;}
+.pricing-section h3{font-family:'Playfair Display',serif;font-size:1.4rem;color:var(--gold-accent);margin-bottom:8px;}
 .price-hero{font-family:'Playfair Display',serif;font-size:5rem;font-weight:700;color:var(--white);line-height:1;margin:20px 0 10px;}
-.price-hero sup{font-size:2rem;vertical-align:super;color:var(--accent);}
+.price-hero sup{font-size:2rem;vertical-align:super;color:var(--gold-accent);}
 .price-label{font-size:1.1rem;color:rgba(255,255,255,0.7);margin-bottom:30px;}
-.price-includes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:16px;margin-top:30px;text-align:left;}
-.price-include-item{background:rgba(255,255,255,0.07);border:1px solid rgba(201,169,110,0.2);border-radius:16px;padding:18px;display:flex;align-items:flex-start;gap:12px;}
-.price-include-item i{color:var(--accent);font-size:1.2rem;flex-shrink:0;margin-top:2px;}
-.price-include-item span{font-size:0.88rem;color:rgba(255,255,255,0.85);line-height:1.4;}
-.price-note{margin-top:28px;font-size:0.82rem;color:rgba(255,255,255,0.5);}
+.price-includes-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:14px;margin-top:28px;text-align:left;}
+.price-include-item{background:rgba(255,255,255,0.07);border:1px solid rgba(201,169,110,0.2);border-radius:14px;padding:16px;display:flex;align-items:flex-start;gap:12px;}
+.price-include-item i{color:var(--gold-accent);font-size:1.1rem;flex-shrink:0;margin-top:2px;}
+.price-include-item span{font-size:0.87rem;color:rgba(255,255,255,0.85);line-height:1.4;}
+.price-note{margin-top:26px;font-size:0.8rem;color:rgba(255,255,255,0.45);}
 
-/* ══ VENUE INFO ══ */
-.venue-info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px;margin-top:36px;}
-.venue-info-card{background:var(--background);border:1px solid var(--beige);border-radius:18px;padding:22px;text-align:center;}
-.venue-info-card i{color:var(--primary);font-size:1.5rem;margin-bottom:10px;display:block;}
-.venue-info-card h5{font-size:0.8rem;text-transform:uppercase;letter-spacing:1.5px;font-weight:700;color:var(--gray-text);margin-bottom:6px;}
-.venue-info-card p{font-size:1rem;font-weight:600;color:var(--primary-dark);}
+/* ══ COMPLEMENTOS ══ */
+.complementos-section{margin-top:60px;padding-top:55px;border-top:1px solid var(--beige);}
+.complementos-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:26px;margin-top:28px;}
+.complemento-card{border-radius:22px;overflow:hidden;border:1px solid var(--beige);background:var(--white);transition:all 0.4s cubic-bezier(0.165,0.84,0.44,1);}
+.complemento-card:hover{transform:translateY(-6px);box-shadow:0 20px 44px rgba(246,92,122,0.12);border-color:var(--primary-pink);}
+.complemento-img{width:100%;height:200px;object-fit:cover;display:block;transition:transform 0.7s ease;}
+.complemento-card:hover .complemento-img{transform:scale(1.06);}
+.complemento-body{padding:24px;}
+.complemento-body h4{font-size:1.2rem;color:var(--primary-dark);margin-bottom:8px;display:flex;align-items:center;gap:10px;}
+.complemento-body h4 i{color:var(--primary-pink);}
+.complemento-body p{font-size:0.9rem;color:var(--gray-text);line-height:1.6;margin-bottom:18px;}
+.btn-complemento{display:inline-flex;align-items:center;gap:9px;background:var(--primary-pink);color:var(--white);padding:10px 22px;border-radius:50px;font-weight:600;font-size:0.87rem;text-decoration:none;transition:all 0.3s ease;}
+.btn-complemento:hover{background:#e04b69;transform:translateY(-2px);}
+.btn-complemento.gold{background:var(--gold-accent);}
+.btn-complemento.gold:hover{filter:brightness(1.1);transform:translateY(-2px);}
 
-/* ══ ADAPTACIÓN NOTA ══ */
-.adaptation-badge{background:var(--soft-gold);border:1px solid var(--accent);border-radius:18px;padding:20px 28px;margin-top:40px;display:flex;align-items:flex-start;gap:16px;}
-.adaptation-badge i{color:var(--primary);font-size:1.5rem;flex-shrink:0;margin-top:2px;}
-.adaptation-badge div h4{font-size:1rem;font-weight:700;color:var(--primary-dark);margin-bottom:5px;}
-.adaptation-badge div p{font-size:0.9rem;color:var(--gray-text);}
+/* ══ PUBLICIDAD ══ */
+.pub-section{margin-top:60px;padding:50px 0 0;}
+.pub-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px;margin-top:28px;}
+.pub-card{border-radius:20px;overflow:hidden;position:relative;cursor:pointer;aspect-ratio:4/5;}
+.pub-card img{width:100%;height:100%;object-fit:cover;display:block;transition:transform 0.7s ease;}
+.pub-card:hover img{transform:scale(1.06);}
+.pub-card-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(31,31,31,0.6),transparent);opacity:0;transition:opacity 0.4s ease;display:flex;align-items:flex-end;padding:20px;}
+.pub-card:hover .pub-card-overlay{opacity:1;}
+.pub-card-overlay span{color:var(--white);font-weight:600;font-size:0.9rem;}
 
 /* ══ KIT SECTION ══ */
-.kit-section{margin-top:60px;background:linear-gradient(135deg,#1a1a1a 0%,#2d1422 100%);border-radius:24px;padding:50px;color:white;display:flex;flex-wrap:wrap;align-items:center;gap:40px;}
+.kit-section{margin-top:60px;background:linear-gradient(135deg,var(--primary-dark) 0%,#2d1422 100%);border-radius:24px;padding:50px;color:white;display:flex;flex-wrap:wrap;align-items:center;gap:40px;}
 .kit-content{flex:1;min-width:260px;}
-.kit-badge{background:var(--accent);display:inline-block;padding:5px 15px;border-radius:50px;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;color:#1a1008;}
+.kit-badge{background:var(--gold-accent);display:inline-block;padding:5px 15px;border-radius:50px;font-size:0.78rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:16px;color:var(--primary-dark);}
 .kit-content h3{font-family:'Playfair Display',serif;font-size:2rem;margin-bottom:12px;}
 .kit-content p{color:rgba(255,255,255,0.75);font-size:0.95rem;margin-bottom:24px;line-height:1.7;}
 .kit-buttons{display:flex;gap:14px;flex-wrap:wrap;}
 .btn-kit{display:inline-flex;align-items:center;gap:10px;padding:13px 26px;border-radius:50px;font-weight:600;font-size:0.9rem;text-decoration:none;transition:all 0.3s ease;}
-.btn-kit.primary{background:var(--pink);color:white;}
+.btn-kit.primary{background:var(--primary-pink);color:white;}
 .btn-kit.primary:hover{filter:brightness(1.1);transform:translateY(-3px);}
 .btn-kit.secondary{background:rgba(255,255,255,0.1);color:white;border:1px solid rgba(255,255,255,0.25);}
 .btn-kit.secondary:hover{background:rgba(255,255,255,0.2);transform:translateY(-3px);}
-
-/* ══ INV DIGITAL ══ */
-.inv-card{display:flex;flex-wrap:wrap;gap:28px;align-items:center;background:linear-gradient(135deg,#fadadd,#fff5f7);border-radius:24px;padding:36px;border:1px solid rgba(246,92,122,0.15);margin-top:50px;}
-.inv-card-icon{width:72px;height:72px;background:var(--pink);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:2rem;color:white;flex-shrink:0;}
-.inv-card-body h3{font-size:1.4rem;margin-bottom:8px;color:var(--primary-dark);}
-.inv-card-body p{color:var(--gray-text);font-size:0.92rem;margin-bottom:14px;line-height:1.65;}
-.btn-inv{display:inline-flex;align-items:center;gap:10px;background:var(--pink);color:white;padding:11px 26px;border-radius:50px;font-weight:600;font-size:0.9rem;text-decoration:none;transition:all 0.3s ease;}
-.btn-inv:hover{filter:brightness(1.1);transform:translateY(-2px);}
 
 /* ══ PDF ══ */
 .pdf-section{margin-top:50px;text-align:center;padding:38px;background:var(--white);border:1px solid var(--beige);border-radius:24px;}
@@ -155,41 +169,41 @@ h1,h2,h3,h4{font-family:'Playfair Display',serif;}
 .btn-pdf:hover{transform:translateY(-4px) scale(1.02);box-shadow:0 18px 40px rgba(192,57,43,0.4);}
 
 /* ══ FIRMA ══ */
-.signature-section{text-align:center;margin-top:40px;}
+.signature-section{text-align:center;margin:40px 0 10px;}
 
 /* ══ NOTAS ══ */
 .notes-section{margin-top:50px;padding:36px;border:1px solid var(--beige);border-radius:22px;background:var(--white);}
 .notes-section h3{font-size:1.4rem;margin-bottom:18px;display:flex;align-items:center;gap:12px;}
-.notes-section h3 i{color:var(--primary);}
+.notes-section h3 i{color:var(--primary-pink);}
 .notes-section p{color:var(--gray-text);font-size:0.92rem;line-height:1.7;margin-bottom:10px;}
-.quote-phrase{font-style:italic;color:var(--primary);font-weight:600;margin-top:16px!important;}
+.quote-phrase{font-style:italic;color:var(--primary-pink);font-weight:600;margin-top:16px!important;}
 
 /* ══ CTA ══ */
-.cta-container{text-align:center;margin-top:60px;padding:50px 20px;background:var(--background);border-radius:24px;}
+.cta-container{text-align:center;margin-top:60px;padding:50px 20px;background:var(--background-light);border-radius:24px;}
 .cta-container p{margin-bottom:28px;font-style:italic;color:var(--gray-text);}
-.btn-wa{background:linear-gradient(135deg,var(--primary),var(--primary-light));color:white;padding:20px 50px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:15px;font-weight:600;font-size:1.1rem;transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);box-shadow:0 15px 30px rgba(90,62,43,0.25);}
-.btn-wa:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 22px 44px rgba(90,62,43,0.38);}
+.btn-wa{background:linear-gradient(135deg,var(--primary-pink),var(--primary-light));color:white;padding:20px 50px;border-radius:50px;text-decoration:none;display:inline-flex;align-items:center;gap:15px;font-weight:600;font-size:1.1rem;transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);box-shadow:0 15px 30px rgba(246,92,122,0.25);}
+.btn-wa:hover{transform:translateY(-5px) scale(1.02);box-shadow:0 22px 44px rgba(246,92,122,0.38);}
 
 /* ══ FOOTER ══ */
 footer{padding:60px 20px;background:var(--white);border-top:1px solid var(--beige);text-align:center;}
-.footer-container{max-width:800px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:18px;}
-.footer-logo{width:70px;height:70px;border-radius:50%;object-fit:cover;border:2px solid var(--accent);margin-bottom:8px;}
+.footer-container{max-width:800px;margin:0 auto;display:flex;flex-direction:column;align-items:center;gap:16px;}
+.footer-logo{width:70px;height:70px;border-radius:50%;object-fit:cover;border:2px solid var(--gold-accent);margin-bottom:6px;}
 .footer-container h3{font-family:'Playfair Display',serif;font-size:1.7rem;color:var(--primary-dark);}
 .footer-container p,.footer-container a{font-size:0.92rem;color:var(--gray-text);text-decoration:none;}
-.footer-container a:hover{color:var(--primary);}
-.footer-bottom{margin-top:32px;padding-top:18px;border-top:1px solid var(--beige);font-size:0.78rem;color:var(--gray-text);}
+.footer-container a:hover{color:var(--primary-pink);}
+.footer-bottom{margin-top:30px;padding-top:18px;border-top:1px solid var(--beige);font-size:0.78rem;color:var(--gray-text);}
 
 /* ══ FAB ══ */
 .floating-actions-container{position:fixed;bottom:15px;right:15px;z-index:1000;display:flex;flex-direction:column;align-items:flex-end;gap:15px;}
 .fab-group{display:flex;flex-direction:column;align-items:flex-end;position:relative;}
-.fab-main{width:50px;height:50px;border-radius:50%;background:transparent;border:none;color:var(--primary);font-size:1.8rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);}
+.fab-main{width:50px;height:50px;border-radius:50%;background:transparent;border:none;color:var(--primary-pink);font-size:1.8rem;cursor:pointer;display:flex;align-items:center;justify-content:center;transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);}
 .fab-main:hover{transform:scale(1.1) translateY(-5px);}
 .fab-label{position:absolute;right:65px;background:var(--white);color:var(--primary-dark);padding:6px 12px;border-radius:20px;font-size:0.78rem;white-space:nowrap;box-shadow:0 4px 10px rgba(0,0,0,0.1);opacity:0;visibility:hidden;transition:all 0.3s ease;font-weight:500;pointer-events:none;}
 .fab-main:hover .fab-label{opacity:1;visibility:visible;right:60px;}
 .fab-menu{display:flex;flex-direction:column-reverse;gap:8px;position:absolute;bottom:100%;right:5px;opacity:0;visibility:hidden;transform:translateY(20px);transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);margin-bottom:10px;pointer-events:none;}
 .fab-group.active .fab-menu{opacity:1;visibility:visible;transform:translateY(0);pointer-events:auto;}
-.fab-item{width:40px;height:40px;border-radius:50%;background:var(--white);color:var(--primary);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.1rem;box-shadow:0 4px 12px rgba(0,0,0,0.1);transition:all 0.3s ease;}
-.fab-item:hover{background:var(--primary);color:var(--white);transform:scale(1.15);}
+.fab-item{width:40px;height:40px;border-radius:50%;background:var(--white);color:var(--primary-pink);display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:1.1rem;box-shadow:0 4px 12px rgba(0,0,0,0.1);transition:all 0.3s ease;}
+.fab-item:hover{background:var(--primary-pink);color:var(--white);transform:scale(1.15);}
 .fab-group.active .fab-main{transform:rotate(15deg) scale(0.9);}
 
 /* ══ ANIMACIONES ══ */
@@ -202,20 +216,10 @@ footer{padding:60px 20px;background:var(--white);border-top:1px solid var(--beig
 .reveal.active{opacity:1;transform:translate(0,0)!important;}
 .d1{transition-delay:0.1s;}.d2{transition-delay:0.2s;}.d3{transition-delay:0.3s;}.d4{transition-delay:0.4s;}
 
-/* ══ PRINT ══ */
-@media print{
-    #preloader,.floating-actions-container,.pdf-section,.btn-inv,.cta-container .btn-wa,audio{display:none!important;}
-    body{background:white!important;}
-    .quote-card{box-shadow:none!important;padding:20px!important;}
-    .hero{height:200px!important;min-height:auto!important;}
-    .container{margin-top:0!important;}
-    .reveal{opacity:1!important;transform:none!important;}
-}
-
 /* ══ RESPONSIVE ══ */
 @media(max-width:768px){
     .hero h1{font-size:2.2rem;}
-    .hero{height:auto;aspect-ratio:16/9;min-height:300px;}
+    .hero{height:auto;min-height:300px;}
     .container{margin-top:0;padding:0 15px;}
     .quote-card{padding:28px 15px;border-radius:0;box-shadow:none;}
     .header-main h2{font-size:2rem;}
@@ -224,14 +228,46 @@ footer{padding:60px 20px;background:var(--white);border-top:1px solid var(--beig
     .info-box{flex:1;padding:14px;min-width:0;}
     .info-box strong{font-size:1.1rem;}
     .includes-grid{grid-template-columns:1fr;}
-    .venue-showcase{grid-template-columns:1fr;}
-    .venue-showcase .main-img{grid-column:1;}
-    .venue-showcase .main-img img{height:200px;}
-    .venue-showcase img{height:150px;}
     .price-hero{font-size:3.5rem;}
     .pricing-section{padding:35px 20px;}
     .price-includes-grid{grid-template-columns:1fr 1fr;}
+    .pub-grid{grid-template-columns:1fr 1fr;}
     .kit-section{padding:30px 22px;}
+    .venue-gallery{grid-template-columns:1fr;}
+    .venue-gallery .span2{grid-column:1;}
+}
+
+/* ══ PRINT / PDF ══ */
+@media print{
+    #preloader,.floating-actions-container,.pdf-section,.kit-buttons,
+    .cta-container .btn-wa,audio,.hero-dots{display:none!important;}
+    body{background:white!important;font-size:10pt;}
+    .quote-card{box-shadow:none!important;padding:16px!important;margin:0!important;border-radius:0!important;}
+    .hero{height:160px!important;min-height:auto!important;}
+    .hero h1{font-size:1.8rem!important;}
+    .hero-sub,.hero-eyebrow,.hero-badges{display:none!important;}
+    .container{margin-top:0!important;}
+    /* Prevent cuts inside cards */
+    .include-item,.venue-info-card,.complemento-card,.pub-card,
+    .notes-section,.pricing-section,.kit-section,.pdf-section{
+        page-break-inside:avoid!important;
+        break-inside:avoid!important;
+    }
+    /* Prevent images from being cut */
+    .include-img-container{height:100px!important;page-break-inside:avoid!important;}
+    .complemento-img{height:100px!important;}
+    .pub-card{aspect-ratio:auto!important;height:150px!important;}
+    /* Section headings stay with their content */
+    .section-title{page-break-after:avoid!important;break-after:avoid!important;}
+    h2,h3,h4{page-break-after:avoid!important;break-after:avoid!important;}
+    /* Grids collapse to single column */
+    .includes-grid,.complementos-grid,.pub-grid,.venue-info-grid{
+        display:block!important;
+    }
+    .include-item,.complemento-card{margin-bottom:12pt!important;}
+    .reveal{opacity:1!important;transform:none!important;}
+    /* Signatures */
+    .signature-section video{display:none!important;}
 }
 </style>
 
@@ -243,27 +279,25 @@ footer{padding:60px 20px;background:var(--white);border-top:1px solid var(--beig
         <source src="precarga.mp4" type="video/mp4">
     </video>
     <div class="preloader-overlay">
-        <p class="preloader-text">Bienvenido a su cotización exclusiva de<br><strong>Salón Jardín Los Caballos</strong></p>
+        <p class="preloader-text">Bienvenido a su cotización exclusiva<br><strong>Salón Jardín Los Caballos</strong></p>
         <button id="btnEnter" class="btn-enter">Haz clic para continuar</button>
     </div>
 </div>
 <script>
 document.addEventListener('DOMContentLoaded',function(){
-    var preloader=document.getElementById('preloader');
     var vid=document.getElementById('preloaderVideo');
     var audio=document.getElementById('bgAudio');
-    if(vid){vid.play().catch(function(){});}
+    var preloader=document.getElementById('preloader');
+    if(vid)vid.play().catch(function(){});
     document.getElementById('btnEnter').addEventListener('click',function(){
-        if(audio){audio.play().catch(function(){});}
-        var firma=document.getElementById('videoFirma');
-        if(firma){firma.play().catch(function(){});}
+        if(audio)audio.play().catch(function(){});
         preloader.classList.add('fade-out');
         setTimeout(function(){preloader.style.display='none';},800);
     });
 });
 </script>
 
-<!-- ══ HERO SLIDESHOW ══ -->
+<!-- ══ HERO ══ -->
 <header class="hero" id="hero">
     <div class="hero-slides">
         <div class="hero-slide active"></div>
@@ -272,11 +306,11 @@ document.addEventListener('DOMContentLoaded',function(){
         <div class="hero-slide"></div>
     </div>
     <div class="hero-content">
-        <div class="hero-eyebrow"><i class="fa-solid fa-horse"></i> Salón Jardín Los Caballos · Cuernavaca, Morelos</div>
-        <h1>Paquete Ecuestre</h1>
-        <p class="hero-sub">Propuesta Integral · Todo Incluido</p>
+        <div class="hero-eyebrow"><i class="fa-solid fa-location-dot"></i> Salón Jardín Los Caballos · Cuernavaca, Morelos</div>
+        <h1>Paquete Todo Incluido</h1>
+        <p class="hero-sub">Primavera Events Group · El Arte de Servir</p>
         <div class="hero-badges">
-            <span class="hero-badge"><i class="fa-solid fa-utensils"></i> Carnitas</span>
+            <span class="hero-badge"><i class="fa-solid fa-drumstick-bite"></i> Carnitas</span>
             <span class="hero-badge"><i class="fa-solid fa-compact-disc"></i> DJ &amp; Audio</span>
             <span class="hero-badge"><i class="fa-solid fa-star"></i> $399 MXN por persona</span>
         </div>
@@ -292,183 +326,165 @@ document.addEventListener('DOMContentLoaded',function(){
 <main class="container">
 <div class="quote-card">
 
-<!-- ── Header Info ── -->
+<!-- ── Header ── -->
 <div class="header-info reveal">
     <div class="header-main">
-        <h2>Paquete Ecuestre<br>Adaptado</h2>
-        <p>Hemos adaptado el <strong>Paquete Ecuestre</strong> del Salón Jardín Los Caballos para incluir un servicio de <strong>carnitas</strong> en lugar del menú estándar, conservando todos los demás servicios al más alto nivel de calidad que Primavera Events Group garantiza en cada celebración.</p>
-        <span class="badge-event"><i class="fa-solid fa-horse"></i> Salón Los Caballos · Cuernavaca, Morelos</span>
+        <h2>Paquete Todo Incluido</h2>
+        <p>Hemos preparado con mucho cariño esta propuesta integral para su evento en el <strong>Salón Jardín Los Caballos</strong>, Cuernavaca Morelos. Un paquete completo con alimentos, audio, iluminación, DJ, meseros, coordinación y decoración al nivel de excelencia que <strong>Primavera Events Group</strong> garantiza en cada celebración.</p>
+        <span class="badge-event"><i class="fa-solid fa-star"></i> XV Años · Boda · Fiesta · Graduación</span>
     </div>
     <div class="summary-boxes">
         <div class="info-box"><span>Capacidad</span><strong>300 p.</strong></div>
         <div class="info-box"><span>Precio</span><strong>$399 p/p</strong></div>
-        <div class="info-box"><span>Evento</span><strong>XV / Boda / Fiesta</strong></div>
-        <div class="info-box"><span>Horario</span><strong>Flexible</strong></div>
+        <div class="info-box"><span>Celebración</span><strong>XV/Boda/Fiesta</strong></div>
     </div>
 </div>
 
-<!-- ── Galería del salón ── -->
-<div class="reveal">
-    <h3 class="section-title" style="margin-top:0;"><i class="fa-solid fa-images"></i> El Salón</h3>
-    <div class="venue-showcase">
-        <div class="main-img"><img src="caballos_hero1.jpg" alt="Salón Los Caballos - Vista general"></div>
-        <div><img src="caballos_jardin1.jpg" alt="Área de jardín"></div>
-        <div><img src="caballos_lounge.jpg" alt="Zona lounge"></div>
-    </div>
+<!-- ── Logo del Salón (botón) ── -->
+<div class="reveal" style="text-align:center;margin-bottom:40px;">
+    <a href="https://salonloscaballos.com.mx" target="_blank" class="venue-logo-btn">
+        <img src="logo_caballos.png" alt="Salón Jardín Los Caballos" onerror="this.style.display='none'">
+        <span class="venue-logo-caption">Visitar sitio oficial del Salón</span>
+    </a>
+</div>
+
+<!-- ── Galería ── -->
+<h3 class="section-title reveal" style="margin-top:0;"><i class="fa-solid fa-images"></i> El Salón</h3>
+<div class="venue-gallery reveal">
+    <img src="caballos_hero1.jpg" alt="Salón Los Caballos - Vista general" class="span2">
+    <img src="caballos_jardin1.jpg" alt="Área de jardín">
+    <img src="caballos_lounge.jpg" alt="Zona lounge">
 </div>
 
 <!-- ── Datos del salón ── -->
 <div class="venue-info-grid reveal">
-    <div class="venue-info-card">
-        <i class="fa-solid fa-users"></i>
-        <h5>Capacidad</h5>
-        <p>300 personas</p>
-    </div>
-    <div class="venue-info-card">
-        <i class="fa-solid fa-expand"></i>
-        <h5>Jardín</h5>
-        <p>600 m² áreas verdes</p>
-    </div>
-    <div class="venue-info-card">
-        <i class="fa-solid fa-umbrella"></i>
-        <h5>Techado</h5>
-        <p>Salón + jardín mixto</p>
-    </div>
-    <div class="venue-info-card">
-        <i class="fa-solid fa-location-dot"></i>
-        <h5>Ubicación</h5>
-        <p>Ocotepec, Cuernavaca</p>
-    </div>
-    <div class="venue-info-card">
-        <i class="fa-solid fa-phone"></i>
-        <h5>Teléfono</h5>
-        <p>(777) 261 5433</p>
-    </div>
-    <div class="venue-info-card">
-        <i class="fa-solid fa-car"></i>
-        <h5>Acceso</h5>
-        <p>Ignacio Zaragoza #21, Col. Ocotepec</p>
-    </div>
+    <div class="venue-info-card"><i class="fa-solid fa-users"></i><h5>Capacidad</h5><p>300 personas</p></div>
+    <div class="venue-info-card"><i class="fa-solid fa-expand"></i><h5>Jardín</h5><p>600 m² áreas verdes</p></div>
+    <div class="venue-info-card"><i class="fa-solid fa-umbrella"></i><h5>Techado</h5><p>Salón mixto</p></div>
+    <div class="venue-info-card"><i class="fa-solid fa-location-dot"></i><h5>Dirección</h5><p>Ignacio Zaragoza #21, Ocotepec, Cuernavaca</p></div>
+    <div class="venue-info-card"><i class="fa-solid fa-phone"></i><h5>Salón Tel.</h5><p>(777) 261 5433</p></div>
 </div>
 
 <!-- ── Desglose del Paquete ── -->
-<h3 class="section-title reveal"><i class="fa-solid fa-list-check"></i> Desglose Completo del Paquete</h3>
-
+<h3 class="section-title reveal"><i class="fa-solid fa-list-check"></i> Desglose del Paquete</h3>
 <div class="includes-grid">
 
-    <!-- Recepción -->
     <div class="reveal d1"><div class="include-item">
-        <div class="include-img-container">
-            <img src="margaritas.webp" alt="Recepción" class="include-img">
-            <span class="include-tag">Recepción</span>
-        </div>
+        <div class="include-img-container"><img src="aguas_frescas.webp" alt="Aguas Frescas" class="include-img"></div>
         <div class="include-content">
-            <h4><i class="fa-solid fa-glass-water"></i> Bienvenida y Recepción</h4>
+            <h4><i class="fa-solid fa-glass-water"></i> Aguas Frescas Naturales</h4>
+            <p>Aguas frescas naturales de temporada servidas a la llegada de los invitados. Frescas, deliciosas y perfectas para iniciar la celebración.</p>
+        </div>
+    </div></div>
+
+    <div class="reveal d2"><div class="include-item">
+        <div class="include-img-container"><img src="margaritas.webp" alt="Margaritas" class="include-img"></div>
+        <div class="include-content">
+            <h4><i class="fa-solid fa-martini-glass"></i> Margaritas sin Alcohol</h4>
+            <p>Margaritas de sabores sin alcohol preparadas al momento como parte del recibimiento de bienvenida para los invitados durante la recepción.</p>
+        </div>
+    </div></div>
+
+    <div class="reveal d3"><div class="include-item">
+        <div class="include-img-container"><img src="aguas_frescas.webp" alt="Piña Piñadas" class="include-img"></div>
+        <div class="include-content">
+            <h4><i class="fa-solid fa-glass-water-droplet"></i> Piña Piñadas</h4>
+            <p>Piña piñadas frescas sin alcohol, una refrescante bebida de bienvenida servida a los invitados durante la recepción del evento.</p>
+        </div>
+    </div></div>
+
+    <div class="reveal d1"><div class="include-item">
+        <div class="include-img-container"><img src="cristaleria.webp" alt="Sala Lounge" class="include-img"></div>
+        <div class="include-content">
+            <h4><i class="fa-solid fa-couch"></i> Sala Lounge</h4>
+            <p>Área lounge elegante habilitada para recibir a los invitados: espacio decorado y acondicionado para la recepción del evento, con mobiliario cómodo y ambiente especial.</p>
+        </div>
+    </div></div>
+
+    <div class="reveal d1"><div class="include-item">
+        <div class="include-img-container"><img src="caballos_jardin2.jpg" alt="Carnitas" class="include-img"></div>
+        <div class="include-content">
+            <h4><i class="fa-solid fa-drumstick-bite"></i> Carnitas Surtidas</h4>
             <ul class="include-list">
-                <li><i class="fa-solid fa-check"></i><span><strong>Aguas frescas</strong> naturales de temporada</span></li>
-                <li><i class="fa-solid fa-check"></i><span><strong>Margaritas</strong> de sabores sin alcohol</span></li>
-                <li><i class="fa-solid fa-check"></i><span><strong>Piña piñadas</strong> sin alcohol preparadas al momento</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Servicio de bienvenida con meseros</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Carnitas surtidas de cerdo de calidad</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Tortillas calientes, salsas artesanales</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Cebolla, cilantro, limones y guacamole</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Servicio completo para todos los invitados</span></li>
             </ul>
         </div>
     </div></div>
 
-    <!-- Carnitas -->
     <div class="reveal d2"><div class="include-item">
-        <div class="include-img-container">
-            <img src="caballos_jardin2.jpg" alt="Carnitas" class="include-img">
-            <span class="include-tag">⭐ Especial</span>
-        </div>
-        <div class="include-content">
-            <h4><i class="fa-solid fa-drumstick-bite"></i> Carnitas (Adaptación Especial)</h4>
-            <p>Servicio completo de <strong>carnitas</strong> en lugar del menú estándar del paquete. Incluye surtida de cerdo, tortillas, salsas, cebolla, cilantro, limones y guacamole para todos los invitados.</p>
-        </div>
-    </div></div>
-
-    <!-- Salita Lunch -->
-    <div class="reveal d3"><div class="include-item">
-        <div class="include-img-container">
-            <img src="crudites.webp" alt="Salita Lunch" class="include-img">
-            <span class="include-tag">Aperitivo</span>
-        </div>
-        <div class="include-content">
-            <h4><i class="fa-solid fa-bowl-food"></i> Salita Lunch</h4>
-            <p>Área de bocadillos y aperitivos tipo <strong>salita</strong> para amenizar la llegada de los invitados: botanas selectas, botanas saladas y snacks de bienvenida mientras comienza el evento.</p>
-        </div>
-    </div></div>
-
-    <!-- Audio y Pista -->
-    <div class="reveal d1"><div class="include-item">
-        <div class="include-img-container">
-            <img src="pista.jpg" alt="Audio y Pista" class="include-img">
-            <span class="include-tag">Producción</span>
-        </div>
+        <div class="include-img-container"><img src="pista.jpg" alt="Pista de Baile" class="include-img"></div>
         <div class="include-content">
             <h4><i class="fa-solid fa-music"></i> Audio y Pista de Baile</h4>
             <ul class="include-list">
                 <li><i class="fa-solid fa-check"></i><span>Pista de baile <strong>5×5 metros</strong> iluminada</span></li>
                 <li><i class="fa-solid fa-check"></i><span>Sistema de audio profesional de alta potencia</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Micrófonos inalámbricos para brindis y ceremonias</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Micrófonos inalámbricos incluidos</span></li>
             </ul>
         </div>
     </div></div>
 
-    <!-- Iluminación -->
-    <div class="reveal d2"><div class="include-item">
-        <div class="include-img-container">
-            <img src="letras_gigantes.webp" alt="Letras iluminadas" class="include-img">
-            <span class="include-tag">Iluminación</span>
-        </div>
-        <div class="include-content">
-            <h4><i class="fa-solid fa-lightbulb"></i> Letras Iluminadas + Iluminación</h4>
-            <ul class="include-list">
-                <li><i class="fa-solid fa-check"></i><span>Letras gigantes iluminadas: <strong>«XV»</strong>, <strong>«LOVE»</strong> o <strong>Iniciales</strong> (según celebración)</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Iluminación decorativa del salón</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Pantalla con proyector para presentaciones o videos</span></li>
-            </ul>
-        </div>
-    </div></div>
-
-    <!-- DJ -->
     <div class="reveal d3"><div class="include-item">
-        <div class="include-img-container">
-            <img src="dj.webp" alt="DJ Profesional" class="include-img">
-            <span class="include-tag">Entretenimiento</span>
+        <div class="include-img-container"><img src="letras_gigantes.webp" alt="Letras Iluminadas" class="include-img"></div>
+        <div class="include-content">
+            <h4><i class="fa-solid fa-lightbulb"></i> Letras Iluminadas</h4>
+            <ul class="include-list">
+                <li><i class="fa-solid fa-check"></i><span>Letras gigantes: <strong>«XV»</strong>, <strong>«LOVE»</strong> o <strong>Iniciales</strong></span></li>
+                <li><i class="fa-solid fa-check"></i><span>Según el tipo de celebración elegida</span></li>
+            </ul>
         </div>
+    </div></div>
+
+    <div class="reveal d3"><div class="include-item">
+        <div class="include-img-container"><img src="tiempo_servicio.webp" alt="Pantallas" class="include-img"></div>
+        <div class="include-content">
+            <h4><i class="fa-solid fa-tv"></i> Pantallas</h4>
+            <p>Pantallas para presentaciones, videos de recuerdo o transmisión durante el evento.</p>
+        </div>
+    </div></div>
+
+    <div class="reveal d2"><div class="include-item">
+        <div class="include-img-container"><img src="dj.webp" alt="DJ" class="include-img"></div>
         <div class="include-content">
             <h4><i class="fa-solid fa-compact-disc"></i> DJ Profesional</h4>
-            <p>DJ con amplia experiencia en todo tipo de eventos: bodas, XV años, cumpleaños y fiestas en general. Repertorio amplio y adaptable al gusto de los novios o festejados y sus invitados.</p>
+            <p>DJ con amplia experiencia en XV años, bodas y todo tipo de fiestas. Repertorio amplio y adaptable al gusto del festejado y sus invitados.</p>
         </div>
     </div></div>
 
-    <!-- Meseros y Coordinación -->
-    <div class="reveal d1"><div class="include-item">
-        <div class="include-img-container">
-            <img src="meseros.webp" alt="Meseros" class="include-img">
-            <span class="include-tag">Staff</span>
-        </div>
+    <div class="reveal d3"><div class="include-item">
+        <div class="include-img-container"><img src="capitan.webp" alt="Capitán" class="include-img"></div>
         <div class="include-content">
-            <h4><i class="fa-solid fa-bell-concierge"></i> Meseros y Coordinación</h4>
-            <ul class="include-list">
-                <li><i class="fa-solid fa-check"></i><span>Meseros capacitados uniformados todo el evento</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Coordinador general del minuto a minuto</span></li>
-                <li><i class="fa-solid fa-check"></i><span>Capitán de servicio y supervisión de montaje</span></li>
-            </ul>
+            <h4><i class="fa-solid fa-user-tie"></i> Capitán de Servicio</h4>
+            <p>Capitán de evento supervisando todo el montaje, protocolo y atención al detalle durante toda la celebración para garantizar un servicio impecable.</p>
         </div>
     </div></div>
 
-    <!-- Decoración y Refrescos -->
-    <div class="reveal d2"><div class="include-item">
-        <div class="include-img-container">
-            <img src="centro_de_mesa.webp" alt="Decoración" class="include-img">
-            <span class="include-tag">Decoración</span>
+    <div class="reveal d1"><div class="include-item">
+        <div class="include-img-container"><img src="meseros.webp" alt="Meseros" class="include-img"></div>
+        <div class="include-content">
+            <h4><i class="fa-solid fa-bell-concierge"></i> Meseros Uniformados</h4>
+            <p>Equipo de meseros capacitados y uniformados dando atención personalizada a los invitados durante todo el evento.</p>
         </div>
+    </div></div>
+
+    <div class="reveal d2"><div class="include-item">
+        <div class="include-img-container"><img src="coordinador.webp" alt="Coordinación" class="include-img"></div>
+        <div class="include-content">
+            <h4><i class="fa-solid fa-clipboard-check"></i> Coordinación General</h4>
+            <p>Coordinador del minuto a minuto: programa del evento, croquis y supervisión completa para que todo fluya perfectamente.</p>
+        </div>
+    </div></div>
+
+    <div class="reveal d3"><div class="include-item">
+        <div class="include-img-container"><img src="centro_de_mesa.webp" alt="Decoración" class="include-img"></div>
         <div class="include-content">
             <h4><i class="fa-solid fa-wand-magic-sparkles"></i> Decoración y Refrescos</h4>
             <ul class="include-list">
-                <li><i class="fa-solid fa-check"></i><span>Decoración del salón acorde al tipo de evento (XV, Boda, etc.)</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Decoración del salón según tipo de celebración</span></li>
                 <li><i class="fa-solid fa-check"></i><span>Centros de mesa decorativos</span></li>
-                <li><i class="fa-solid fa-check"></i><span><strong>Refrescos</strong> línea Coca-Cola para todos los invitados</span></li>
+                <li><i class="fa-solid fa-check"></i><span>Refrescos Coca-Cola para todos los invitados</span></li>
                 <li><i class="fa-solid fa-check"></i><span>Hielo, vasos y desechables incluidos</span></li>
             </ul>
         </div>
@@ -476,108 +492,117 @@ document.addEventListener('DOMContentLoaded',function(){
 
 </div><!-- end includes-grid -->
 
-<!-- ── Nota de adaptación ── -->
-<div class="adaptation-badge reveal">
-    <i class="fa-solid fa-circle-info"></i>
-    <div>
-        <h4>Adaptación del Paquete Ecuestre</h4>
-        <p>El menú estándar del Paquete Ecuestre del Salón Los Caballos ha sido <strong>reemplazado por carnitas</strong> a petición del cliente. Todos los demás elementos del paquete (audio, iluminación, DJ, meseros, decoración, refrescos y bebidas de bienvenida) se mantienen sin cambio alguno.</p>
-    </div>
-</div>
-
 <!-- ── PRECIO ── -->
-<div class="pricing-section reveal" style="margin-top:60px;">
+<div class="pricing-section reveal">
     <h3>Inversión por Persona</h3>
     <div class="price-hero"><sup>$</sup>399</div>
-    <div class="price-label">MXN por persona · Precio todo incluido</div>
-
+    <div class="price-label">MXN por persona · Todo incluido</div>
     <div class="price-includes-grid">
-        <div class="price-include-item">
-            <i class="fa-solid fa-glass-water"></i>
-            <span>Recepción: aguas frescas, margaritas y piñadas</span>
-        </div>
-        <div class="price-include-item">
-            <i class="fa-solid fa-drumstick-bite"></i>
-            <span>Carnitas surtidas completas</span>
-        </div>
-        <div class="price-include-item">
-            <i class="fa-solid fa-bowl-food"></i>
-            <span>Salita lunch / botanas de bienvenida</span>
-        </div>
-        <div class="price-include-item">
-            <i class="fa-solid fa-music"></i>
-            <span>Audio profesional y pista 5×5 m</span>
-        </div>
-        <div class="price-include-item">
-            <i class="fa-solid fa-lightbulb"></i>
-            <span>Letras XV / LOVE / iniciales + pantallas</span>
-        </div>
-        <div class="price-include-item">
-            <i class="fa-solid fa-compact-disc"></i>
-            <span>DJ con experiencia en bodas y XV</span>
-        </div>
-        <div class="price-include-item">
-            <i class="fa-solid fa-bell-concierge"></i>
-            <span>Meseros y coordinación completa</span>
-        </div>
-        <div class="price-include-item">
-            <i class="fa-solid fa-wand-magic-sparkles"></i>
-            <span>Decoración del salón + refrescos</span>
-        </div>
+        <div class="price-include-item"><i class="fa-solid fa-glass-water"></i><span>Aguas frescas, margaritas y piñadas</span></div>
+        <div class="price-include-item"><i class="fa-solid fa-bowl-food"></i><span>Salita lunch de bienvenida</span></div>
+        <div class="price-include-item"><i class="fa-solid fa-drumstick-bite"></i><span>Carnitas surtidas completas</span></div>
+        <div class="price-include-item"><i class="fa-solid fa-music"></i><span>Audio profesional y pista 5×5 m</span></div>
+        <div class="price-include-item"><i class="fa-solid fa-lightbulb"></i><span>Letras XV / LOVE / Iniciales + pantallas</span></div>
+        <div class="price-include-item"><i class="fa-solid fa-compact-disc"></i><span>DJ profesional</span></div>
+        <div class="price-include-item"><i class="fa-solid fa-bell-concierge"></i><span>Meseros, capitán y coordinación</span></div>
+        <div class="price-include-item"><i class="fa-solid fa-wand-magic-sparkles"></i><span>Decoración del salón + refrescos</span></div>
     </div>
-    <p class="price-note">$399 MXN por persona · Precio neto · I.V.A. 16% en caso de requerir factura · Sujeto a disponibilidad de fecha · Válido 15 días</p>
+    <p class="price-note">$399 MXN por persona · Precio neto · IVA 16% en caso de factura · Válido 15 días · Sujeto a disponibilidad</p>
 </div>
 
-<!-- ── Kit Planner ── -->
+<!-- ── COMPLEMENTOS DISPONIBLES ── -->
+<div class="complementos-section">
+    <h3 class="section-title reveal" style="margin-top:0;"><i class="fa-solid fa-plus-circle"></i> Complementos Disponibles</h3>
+    <p class="reveal" style="color:var(--gray-text);font-size:0.95rem;margin-bottom:4px;">Potencia tu evento con estos servicios adicionales que puedes contratar por separado:</p>
+    <div class="complementos-grid">
+
+        <div class="complemento-card reveal reveal-left">
+            <img src="pub_jessy_richard.png" alt="Fotografía y Video" class="complemento-img">
+            <div class="complemento-body">
+                <h4><i class="fa-solid fa-camera"></i> Fotografía y Video Profesional</h4>
+                <p>Captura cada momento especial de tu evento con nuestros paquetes de fotografía y video profesional. Recuerdos que duran toda la vida.</p>
+                <a href="https://primaveraeventsgroup.com/paquetes-de-fotografia-y-video/" target="_blank" class="btn-complemento">
+                    <i class="fa-solid fa-eye"></i> Ver paquetes
+                </a>
+            </div>
+        </div>
+
+        <div class="complemento-card reveal reveal-right">
+            <img src="pub_xv_anos.png" alt="Invitación Digital Premium" class="complemento-img" style="object-position:top;">
+            <div class="complemento-body">
+                <h4><i class="fa-solid fa-mobile-screen-button"></i> Invitación Digital Premium</h4>
+                <p>Invitación interactiva personalizada con confirmación de asistencia RSVP en tiempo real, mapa satelital, galería de fotos y mesa de regalos.</p>
+                <a href="https://5410m0n0c001.github.io/invitacion-demo/" target="_blank" class="btn-complemento gold">
+                    <i class="fa-solid fa-eye"></i> Ver demo
+                </a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ── PUBLICIDAD ── -->
+<div class="pub-section reveal">
+    <h3 class="section-title" style="margin-top:0;"><i class="fa-solid fa-sparkles"></i> También Creamos Experiencias Para…</h3>
+    <div class="pub-grid">
+        <div class="pub-card">
+            <img src="pub_boda_ensueno.png" alt="Bodas de ensueño">
+            <div class="pub-card-overlay"><span>Bodas de Ensueño</span></div>
+        </div>
+        <div class="pub-card">
+            <img src="pub_xv_anos.png" alt="XV Años">
+            <div class="pub-card-overlay"><span>XV Años</span></div>
+        </div>
+        <div class="pub-card">
+            <img src="pub_graduados.png" alt="Graduaciones">
+            <div class="pub-card-overlay"><span>Graduaciones</span></div>
+        </div>
+        <div class="pub-card">
+            <img src="pub_jessy_richard.png" alt="Wedding Planning">
+            <div class="pub-card-overlay"><span>Wedding &amp; Event Planning</span></div>
+        </div>
+    </div>
+</div>
+
+<!-- ── KIT PLANNER ── -->
 <div class="kit-section reveal">
     <div class="kit-content">
         <div class="kit-badge"><i class="fa-solid fa-gift"></i> Recursos Gratuitos</div>
         <h3>Kit Planner &amp; Guía Maestra</h3>
-        <p>¡Organizar tu evento es más fácil con las herramientas correctas! Te compartimos gratis nuestro <strong>Smart Event Planner Pro</strong> en Excel y la <strong>Guía Maestra Primavera Events</strong>.</p>
+        <p>Organiza tu evento con las herramientas correctas. Te compartimos nuestro <strong>Smart Event Planner Pro</strong> en Excel y la <strong>Guía Maestra Primavera Events</strong>.</p>
         <div class="kit-buttons">
-            <a href="smart_event_planner_pro.xlsx" download class="btn-kit primary"><i class="fa-solid fa-file-excel"></i> Descargar Kit Planner</a>
+            <a href="smart_event_planner_pro.xlsx" download class="btn-kit primary"><i class="fa-solid fa-file-excel"></i> Kit Planner Excel</a>
             <a href="guia_maestra_primavera.pdf" download class="btn-kit secondary"><i class="fa-solid fa-file-pdf"></i> Guía Maestra PDF</a>
         </div>
-    </div>
-</div>
-
-<!-- ── Invitación Digital ── -->
-<div class="inv-card reveal">
-    <div class="inv-card-icon"><i class="fa-solid fa-mobile-screen-button"></i></div>
-    <div class="inv-card-body">
-        <h3>Invitación Digital Premium — ¡Gratis al Contratar!</h3>
-        <p>Recibe tu <strong>Invitación Digital Interactiva</strong> sin costo adicional al contratar con Primavera Events Group: RSVP en tiempo real, mapa satelital, galería y mesa de regalos. Valor normal: <strong>$8,000 MXN</strong>.</p>
-        <a href="https://5410m0n0c001.github.io/invitacion-demo/" target="_blank" class="btn-inv"><i class="fa-solid fa-eye"></i> Ver Demo</a>
     </div>
 </div>
 
 <!-- ── PDF ── -->
 <div class="pdf-section reveal">
     <h3 style="font-size:1.4rem;margin-bottom:10px;"><i class="fa-solid fa-file-pdf" style="color:#e74c3c;"></i> Descargar esta Cotización</h3>
-    <p>Guarda o imprime esta propuesta en PDF para compartirla fácilmente.</p>
+    <p>Guarda o imprime esta propuesta en PDF para compartirla con quien necesites.</p>
     <button class="btn-pdf" id="btnDownloadPDF"><i class="fa-solid fa-download"></i> Descargar en PDF</button>
 </div>
 
-<!-- ── Firma ── -->
+<!-- ── FIRMA ── -->
 <div class="signature-section reveal">
     <video id="videoFirma" autoplay muted loop playsinline preload="auto" style="max-width:260px;width:100%;height:auto;mix-blend-mode:multiply;">
         <source src="firma.mp4" type="video/mp4">
     </video>
 </div>
 
-<!-- ── Notas ── -->
+<!-- ── NOTAS ── -->
 <div class="notes-section reveal">
-    <h3><i class="fa-solid fa-file-signature"></i> Condiciones y Notas</h3>
-    <p>La presente cotización corresponde al <strong>Paquete Ecuestre adaptado</strong> del Salón Jardín Los Caballos, con menú de carnitas a petición del cliente. Para confirmar la fecha y el tipo de evento (XV años, boda, cumpleaños u otro), comuníquese directamente con Primavera Events Group.</p>
-    <p>El tipo de letras iluminadas (XV, LOVE o iniciales personalizadas) se define al momento de formalizar el contrato según el tipo de celebración.</p>
-    <p>Precio neto · No incluye I.V.A. del 16% en caso de requerir factura oficial · Sujeto a disponibilidad · Se requiere anticipo del 50% para reservar fecha.</p>
+    <h3><i class="fa-solid fa-file-signature"></i> Condiciones</h3>
+    <p>El tipo de letras iluminadas (<strong>XV</strong>, <strong>LOVE</strong> o <strong>iniciales personalizadas</strong>) se define al momento de formalizar el contrato según el tipo de celebración.</p>
+    <p>Precio neto · No incluye IVA del 16% en caso de requerir factura oficial · Precios sujetos a cambios sin previo aviso · Se requiere anticipo del 50% para reservar fecha.</p>
     <p class="quote-phrase">«Cada evento es único. El arte de servir, hecho realidad.»</p>
 </div>
 
 <!-- ── CTA ── -->
 <div class="cta-container reveal">
-    <p>«¿Tienes alguna duda o quieres ajustar algo del paquete? Estamos aquí para ayudarte.»</p>
-    <a href="https://wa.me/527774587923?text=Hola%2C%20ya%20revis%C3%A9%20la%20cotizaci%C3%B3n%20del%20Paquete%20Ecuestre%20en%20Sal%C3%B3n%20Los%20Caballos%20y%20me%20gustar%C3%ADa%20obtener%20m%C3%A1s%20informaci%C3%B3n." class="btn-wa" target="_blank">
+    <p>«¿Tienes alguna duda o quieres ajustar algo? Estamos aquí para ti.»</p>
+    <a href="https://wa.me/527774587923?text=Hola%2C%20revis%C3%A9%20la%20cotizaci%C3%B3n%20del%20Sal%C3%B3n%20Los%20Caballos%20y%20quisiera%20m%C3%A1s%20informaci%C3%B3n." class="btn-wa" target="_blank">
         Contactar a un Planner <i class="fa-brands fa-whatsapp"></i>
     </a>
     <p style="font-size:0.8rem;margin-top:14px;color:var(--gray-text);">Jessy Sandoval &amp; Richard Hernández · +52 777 458 7923</p>
@@ -591,20 +616,20 @@ document.addEventListener('DOMContentLoaded',function(){
     <div class="footer-container">
         <img src="logo_primavera.png" alt="Primavera Events Group" class="footer-logo" onerror="this.style.display='none'">
         <h3>Primavera Events Group</h3>
-        <p><strong style="color:var(--accent);">El Arte de Servir</strong></p>
-        <p><i class="fa-solid fa-location-dot" style="color:var(--primary);width:20px;"></i> Cuernavaca, Morelos · Lun–Vie 9:00–21:00</p>
-        <p><i class="fa-solid fa-phone" style="color:var(--primary);width:20px;"></i> <a href="tel:+527774587923">+52 777 458 7923</a></p>
-        <p><i class="fa-solid fa-globe" style="color:var(--primary);width:20px;"></i> <a href="https://primaveraeventsgroup.com" target="_blank">primaveraeventsgroup.com</a></p>
+        <p><strong style="color:var(--gold-accent);">El Arte de Servir</strong></p>
+        <p><i class="fa-solid fa-location-dot" style="color:var(--primary-pink);width:20px;"></i> Cuernavaca, Morelos</p>
+        <p><i class="fa-solid fa-phone" style="color:var(--primary-pink);width:20px;"></i> <a href="tel:+527774587923">+52 777 458 7923</a></p>
+        <p><i class="fa-solid fa-globe" style="color:var(--primary-pink);width:20px;"></i> <a href="https://primaveraeventsgroup.com" target="_blank">primaveraeventsgroup.com</a></p>
         <div style="margin-top:10px;padding-top:10px;border-top:1px solid var(--beige);font-size:0.82rem;color:var(--gray-text);">
-            <strong>Salón Jardín Los Caballos:</strong> Ignacio Zaragoza #21, Col. Ocotepec, Cuernavaca, Morelos · <a href="tel:7772615433">(777) 261 5433</a>
+            <strong>Salón Jardín Los Caballos:</strong> Ignacio Zaragoza #21, Col. Ocotepec, Cuernavaca · <a href="tel:7772615433">(777) 261 5433</a> · <a href="https://salonloscaballos.com.mx" target="_blank">salonloscaballos.com.mx</a>
         </div>
     </div>
     <div class="footer-bottom"><p>&copy; 2026 Primavera Events Group. Todos los derechos reservados. · Propuesta válida por 15 días.</p></div>
 </footer>
 
-<!-- ══ FAB ══ -->
+<!-- ══ FABs ══ -->
 <div class="floating-actions-container">
-    <div class="fab-group" id="socialGroup">
+    <div class="fab-group">
         <div class="fab-menu">
             <a href="https://facebook.com/share/1GLd3Qt2Tj" target="_blank" class="fab-item"><i class="fa-brands fa-facebook"></i></a>
             <a href="https://instagram.com/primavera.events.group" target="_blank" class="fab-item"><i class="fa-brands fa-instagram"></i></a>
@@ -615,36 +640,31 @@ document.addEventListener('DOMContentLoaded',function(){
     <button class="fab-main" id="btnShare"><span class="fab-label">Compartir</span><i class="fa-solid fa-share-nodes"></i></button>
 </div>
 
-<!-- ══ AUDIO ══ -->
-<audio id="bgAudio" loop preload="auto">
-    <source src="marcasonora.mp3" type="audio/mpeg">
-</audio>
+<audio id="bgAudio" loop preload="auto"><source src="marcasonora.mp3" type="audio/mpeg"></audio>
 
 <script>
 document.addEventListener('DOMContentLoaded',function(){
     // Reveal
     var reveals=document.querySelectorAll('.reveal');
+    new IntersectionObserver(function(entries,o){
+        entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('active');o.unobserve(e.target);}});
+    },{threshold:0.08,rootMargin:'0px 0px -40px 0px'}).observe=function(){};
     var obs=new IntersectionObserver(function(entries,o){
         entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('active');o.unobserve(e.target);}});
-    },{threshold:0.1,rootMargin:'0px 0px -40px 0px'});
+    },{threshold:0.08,rootMargin:'0px 0px -40px 0px'});
     reveals.forEach(function(r){obs.observe(r);});
 
     // Hero slideshow
     var slides=document.querySelectorAll('.hero-slide');
     var dots=document.querySelectorAll('.hero-dot');
     var cur=0;
-    function goSlide(n){
-        slides[cur].classList.remove('active');dots[cur].classList.remove('active');
-        cur=n;slides[cur].classList.add('active');dots[cur].classList.add('active');
-    }
+    function goSlide(n){slides[cur].classList.remove('active');dots[cur].classList.remove('active');cur=n;slides[cur].classList.add('active');dots[cur].classList.add('active');}
     dots.forEach(function(d){d.addEventListener('click',function(){goSlide(parseInt(d.dataset.idx));});});
     setInterval(function(){goSlide((cur+1)%slides.length);},4500);
 
     // Firma
     var firma=document.getElementById('videoFirma');
-    if(firma){
-        new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)firma.play().catch(function(){});});},{threshold:0.05}).observe(firma);
-    }
+    if(firma){new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting)firma.play().catch(function(){});});},{threshold:0.05}).observe(firma);}
 
     // FABs
     var fabs=document.querySelectorAll('.fab-group');
@@ -659,9 +679,9 @@ document.addEventListener('DOMContentLoaded',function(){
 
     // Share
     document.getElementById('btnShare').addEventListener('click',async function(){
-        var d={title:'Cotización Paquete Ecuestre – Salón Los Caballos',text:'Cotización completa del Paquete Ecuestre con carnitas, DJ, audio y más. $399 MXN por persona.',url:window.location.href};
+        var d={title:'Cotización Paquete Los Caballos – Primavera Events Group',text:'$399 MXN por persona. Carnitas, DJ, audio, iluminación y más.',url:window.location.href};
         if(navigator.share){try{await navigator.share(d);}catch(e){}}
-        else{try{await navigator.clipboard.writeText(window.location.href);alert('¡Enlace copiado!');}catch(e){}}
+        else{try{await navigator.clipboard.writeText(window.location.href);alert('Enlace copiado.');}catch(e){}}
     });
 
     // PDF
